@@ -32,6 +32,8 @@
       let GridY = 10;
       let density = GridX * GridY;
       var LandArray = [];
+      trueGridX = window.innerWidth/GridX;
+      trueGridY = window.innerHeight/GridY;
      
      // Fill LandArray
       
@@ -43,6 +45,16 @@
           randLand[i] = "B";
         };
       };
+
+     // Quasirandomness
+      
+      for (i = 0; i < density; i++) {
+        j = i + 1;
+        randQX = Math.floor(Math.random() * j + i;
+        randQY = Math.floor(Math.random() * j + i;
+        vertices[2 * i] = randQX*trueGridX;
+        vertices[2 * i +1] = randQY*trueGridY;
+      }
 
 
 /////////////////////////////////////
