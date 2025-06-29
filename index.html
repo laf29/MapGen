@@ -26,10 +26,28 @@
       const canvas = document.getElementById("myCanvas");
       const ctx = canvas.getContext("2d");
 
-      // Variables
+     // Variables
+
+      let GridX = 10;
+      let GridY = 10;
+      let density = GridX * GridY;
+      var LandArray = [];
+     
+     // Fill LandArray
+      
+      for (i = 0; i < density; i++) {
+        let randLand = Math.floor(Math.random() * 2);
+        if (randLand == 0) {
+          randLand[i] = "G";
+        } else {
+          randLand[i] = "B";
+        };
+      };
 
 
 /////////////////////////////////////
+
+
 /*
 
       function drawSubR(subMoveAngle) { 
