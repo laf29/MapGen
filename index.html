@@ -59,12 +59,17 @@
 
      // Draw
       
-      for (i = 0; i < density; i++) {
+      for (i = 0; i < density - GridX; i++) {
         if (randLand == "B") {
-          bC = Math.floor(Math.random() * 130 + 120;
+          color = [0,  Math.floor(Math.random() * 130 + 120, 212];
         } else if (randLand == "G") {
-          gC = Math.floor(Math.random() * 160 + 180;
+          color = [70, Math.floor(Math.random() * 160 + 180, 0];
         }
+        if (i % GridX != 0) {
+
+        }
+      }
+        
 
         ctx.beginPath();
         ctx.moveTo(-16, -5);
