@@ -66,20 +66,21 @@
           color = [70, Math.floor(Math.random() * 160 + 180, 0];
         }
         if (i % GridX != 0) {
-
+          ctx.beginPath();
+          ctx.moveTo(vertices[2 * i], vertices[2*i+1]);
+          ctx.lineTo(-8, -6);
+          ctx.lineTo(-12, -6);
+          ctx.lineTo(-10, -9);
+          ctx.lineTo(-4, -9);
+          ctx.fillStyle = rgb(color[0],color[1],color[2]);
+          ctx.fill();
+          ctx.closePath();
         }
       }
         
 
-        ctx.beginPath();
-        ctx.moveTo(-16, -5);
-        ctx.lineTo(-8, -6);
-        ctx.lineTo(-12, -6);
-        ctx.lineTo(-10, -9);
-        ctx.lineTo(-4, -9);
-        ctx.fillStyle = "#91959c";
-        ctx.fill();
-        ctx.closePath();
+        
+        
 
 
 
