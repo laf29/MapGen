@@ -1,2 +1,2 @@
 # MapGen
-www.laf29.github.io/map/
+https://laf29.github.io/map/
