@@ -60,21 +60,19 @@
      // Draw
       
       for (i = 0; i < density - GridX; i++) {
-        if (randLand == "B") {
+        if (LandArray[i] == "B") {
           color = [0,  Math.floor(Math.random() * 130 + 120, 212];
-        } else if (randLand == "G") {
+        } else if (LandArray[i] == "G") {
           color = [70, Math.floor(Math.random() * 160 + 180, 0];
-        }
-        if (i % GridX != 0) {
-          j=i+1;
-          k=i+GridX;
-          l=k+1;
+        };
+        n=i+1;
+        if (n % GridX != 0) {
           ctx.beginPath();
-          ctx.moveTo(vertices[2 * i], vertices[2*i+1]);
-          ctx.lineTo(vertices[2 * j)], vertices[2*j+1]);
-          ctx.lineTo(vertices[2 * l], vertices[2*l+1]);
-          ctx.lineTo(vertices[2 * k], vertices[2*k+1]);
-          ctx.lineTo(vertices[2 * i], vertices[2*i+1]);
+          ctx.moveTo(verticesX[i], verticesY[i]);
+          ctx.lineTo(verticesX[i+1], verticesY[i+1]);
+          ctx.lineTo(verticesX[i+GridX+1], verticesY[i+GridX+1]);
+          ctx.lineTo(verticesX[i+GridX], verticesY[i+GridX]);
+          ctx.lineTo(verticesX[i], verticesY[i]);
           ctx.fillStyle = rgb(color[0],color[1],color[2]);
           ctx.fill();
           ctx.closePath();
