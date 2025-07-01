@@ -7,7 +7,7 @@
       * {
         padding: 0;
         margin: 0;
-       /* transform-origin: center; */
+        transform-origin: center;
       }
       canvas {
         background: #234567;
@@ -22,6 +22,8 @@
     <canvas id="myCanvas">Your browser cannot support this game.</canvas>
     <script>
       const canvas = document.getElementById("myCanvas");
+      canvas.setAttribute('width', '1000');
+      canvas.setAttribute('height', '1000');
       const ctx = canvas.getContext("2d");
 
      // Variables
