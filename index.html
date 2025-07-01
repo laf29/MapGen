@@ -49,9 +49,8 @@
      // Quasirandomness
       
       for (i = 0; i < density; i++) {
-        j = i + 1;
-        randQX = Math.floor(Math.random() * j + i;
-        randQY = Math.floor(Math.random() * j + i;
+        randQX = Math.random() + i;
+        randQY = Math.random() + i;
         verticesX[i] = randQX*trueGridX;
         verticesY[i] = randQY*trueGridY;
       };
