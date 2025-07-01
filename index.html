@@ -57,13 +57,8 @@
 
 
      // Draw
-      
-      for (i = 0; i < density - GridX; i++) {
-        if (LandArray[i] == "B") {
-          color = [0,  Math.floor(Math.random() * 130 + 120, 212];
-        } else if (LandArray[i] == "G") {
-          color = [70, Math.floor(Math.random() * 160 + 180, 0];
-        };
+
+      function drawQuads(i) {
         n=i+1;
         if (n % GridX != 0) {
           ctx.beginPath();
@@ -72,9 +67,16 @@
           ctx.lineTo(verticesX[i+GridX+1], verticesY[i+GridX+1]);
           ctx.lineTo(verticesX[i+GridX], verticesY[i+GridX]);
           ctx.lineTo(verticesX[i], verticesY[i]);
-          ctx.fillStyle = rgb(29,30,21);
           ctx.fill();
           ctx.closePath();
+        };
+      };
+
+      for (i = 0; i < density - GridX; i++) {
+        if (LandArray[i] == "B") {
+          color = [0,  Math.floor(Math.random() * 130 + 120, 212];
+        } else if (LandArray[i] == "G") {
+          color = [70, Math.floor(Math.random() * 160 + 180, 0];
         };
       };
     </script>
