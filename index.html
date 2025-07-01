@@ -26,14 +26,14 @@
 
      // Variables
 
-      let GridX = 10;
-      let GridY = 10;
-      let density = GridX * GridY;
+      var GridX = 10;
+      var GridY = 10;
+      var density = GridX * GridY;
       var LandArray = [];
-      verticesX =[];
-      verticesY = [];
-      trueGridX = window.innerWidth/GridX;
-      trueGridY = window.innerHeight/GridY;
+      var verticesX =[];
+      var verticesY = [];
+      var trueGridX = window.innerWidth/GridX;
+      var trueGridY = window.innerHeight/GridY;
      
      // Fill LandArray
       
@@ -53,7 +53,7 @@
         randQX = Math.floor(Math.random() * j + i;
         randQY = Math.floor(Math.random() * j + i;
         verticesX[i] = randQX*trueGridX;
-        verticesY[i +1] = randQY*trueGridY;
+        verticesY[i] = randQY*trueGridY;
       };
 
 
@@ -76,8 +76,8 @@
           ctx.fillStyle = rgb(29,30,21);
           ctx.fill();
           ctx.closePath();
-        }
-      }
+        };
+      };
     </script>
   </body>
 </html>
