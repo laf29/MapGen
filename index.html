@@ -30,6 +30,8 @@
       let GridY = 10;
       let density = GridX * GridY;
       var LandArray = [];
+      verticesX =[];
+      verticesY = [];
       trueGridX = window.innerWidth/GridX;
       trueGridY = window.innerHeight/GridY;
      
@@ -38,9 +40,9 @@
       for (i = 0; i < density; i++) {
         let randLand = Math.floor(Math.random() * 2);
         if (randLand == 0) {
-          randLand[i] = "G";
+          LandArray[i] = "G";
         } else {
-          randLand[i] = "B";
+          LandArray[i] = "B";
         };
       };
 
@@ -50,9 +52,9 @@
         j = i + 1;
         randQX = Math.floor(Math.random() * j + i;
         randQY = Math.floor(Math.random() * j + i;
-        vertices[2 * i] = randQX*trueGridX;
-        vertices[2 * i +1] = randQY*trueGridY;
-      }
+        verticesX[i] = randQX*trueGridX;
+        verticesY[i +1] = randQY*trueGridY;
+      };
 
 
      // Draw
