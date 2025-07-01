@@ -74,10 +74,11 @@
 
       for (i = 0; i < density - GridX; i++) {
         if (LandArray[i] == "B") {
-          color = [0,  Math.floor(Math.random() * 130 + 120, 212];
+          ctx.fillStyle = "#3A72AB";
         } else if (LandArray[i] == "G") {
-          color = [70, Math.floor(Math.random() * 160 + 180, 0];
+          ctx.fillStyle = "#11961E";
         };
+        drawQuads(i);
       };
     </script>
   </body>
